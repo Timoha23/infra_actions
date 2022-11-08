@@ -37,8 +37,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           passwod: ${{ secrets.DOCKER_PASSWORD }}
-        - name: Push to Docker Hub
-          uses: docker/build-push-action@v2
-          with:
-            push: true
-            tags: timoha21/infra-actions:latest
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: timoha21/infra-actions:latest
